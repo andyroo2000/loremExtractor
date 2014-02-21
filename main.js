@@ -24,24 +24,6 @@ var extractor = {
   }
 };
 
-
-// var lorem = function(text) {
-//   var textArray = input.split(' ');
-// 
-//   for (var i = textArray.length - 1; i >= 0; i--) {
-//     if (extractor.isNumber(textArray[i])) {
-//       textArray.splice(i, 1);
-//     }
-//   }
-// 
-//   var textObj = {
-//     allWords: textArray
-//   };
-// 
-//   return textObj;
-// 
-// };
-
 output = extractor.lorem(input);
 
 var fs = require('fs');
