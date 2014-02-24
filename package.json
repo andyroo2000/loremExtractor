@@ -14,16 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andyroo2000/JadeProjectStarter.git"
+    "url": "https://github.com/andyroo2000/loremExtractor.git"
   },
   "keywords": [
-    "jade"
+    "node"
   ],
   "author": "Andrew Landry",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andyroo2000/JadeProjectStarter/issues"
+    "url": "https://github.com/andyroo2000/loremExtractor/issues"
   },
-  "homepage": "https://github.com/andyroo2000/JadeProjectStarter"
+  "homepage": "https://github.com/andyroo2000/loremExtractor"
 }
 
