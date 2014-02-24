@@ -1,0 +1,29 @@
+{
+  "name": "loremExtractor",
+  "version": "0.0.0",
+  "description": "simple utility for sanitizing and converting plaintext into an array of words",
+  "main": "main.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "event-stream": "*",
+    "JSONStream": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyroo2000/JadeProjectStarter.git"
+  },
+  "keywords": [
+    "jade"
+  ],
+  "author": "Andrew Landry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyroo2000/JadeProjectStarter/issues"
+  },
+  "homepage": "https://github.com/andyroo2000/JadeProjectStarter"
+}
+

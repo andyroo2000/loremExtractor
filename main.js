@@ -1,24 +1,11 @@
-var input = "4 Every dog   Must,  Have his 66 Every Day!";
-
-var lorem = function(text) {
-  // remove punctuation and digits
-  text = text.replace(/[,!?()\d]/gm, '');
-  // remove extra whitespace from body
-  text = text.replace(/\s\s*\b/gm, ' ');
-  // remove whitespace from beginning of text so that there aren't empty array items
-  text = text.replace(/^\s*/gm, '');
-  return text.split(' ');
-};
-
-// sets the output
-var output = lorem(input);
-
-// writes the output to a file
 var fs = require('fs');
-fs.writeFile("output.json", JSON.stringify(output), function(err) {
-    if(err) {
-        console.log(err);
-    } else {
-        console.log("The file was saved!");
-    }
-}); 
+var es = require('event-stream');
+var JSONStream = require('JSONStream');
+
+fs.createReadStream('input/input.txt')      // Read File
+  .pipe(es.replace(/[,!?()=:"\.\d]/gm, '')) // remove punctuation and digits
+  .pipe(es.replace(/\s\s*\b/gm, ' '))       // remove extra whitespace from body
+  .pipe(es.replace(/^\s*/gm, ''))           // remove extra whitespace from beginning of text to get rid of empty arrays
+  .pipe(es.split(' '))                      // split the text in an array
+  .pipe(JSONStream.stringify())             // Stringify the array
+  .pipe(fs.createWriteStream("output/output.json"));  // Write the new file
