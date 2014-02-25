@@ -7,5 +7,8 @@ fs.createReadStream('input/input.txt')      // Read File
   .pipe(es.replace(/\s\s*\b/gm, ' '))       // remove extra whitespace from body
   .pipe(es.replace(/^\s*/gm, ''))           // remove extra whitespace from beginning of text to get rid of empty arrays
   .pipe(es.split(' '))                      // split the text in an array
-  .pipe(JSONStream.stringify())             // Stringify the array
+  .pipe(JSONStream.stringify('[', ',',']'))             // Stringify the array
   .pipe(fs.createWriteStream("output/output.json"));  // Write the new file
+
+
+  // open='[\n', sep='\n,\n', close='\n]\n')
